@@ -10,9 +10,6 @@ python create_envs_file.py /tmp/boost_1_69_0
 echo "Sourcing environment variables..."
 source envs.sh
 
-echo "Copying environment variables file to /etc/sherlockml_environment.d ..."
-cp envs.sh /etc/sherlockml_environment.d/envs.sh
-
 echo "CD into /tmp/boost_1_69_0"
 cp patch_boost_project_config.py /tmp/boost_1_69_0
 cd /tmp/boost_1_69_0 
@@ -26,7 +23,7 @@ python patch_boost_project_config.py /tmp/boost_1_69_0/project-config.jam
 echo "Building Boost Python libraries..."
 ./b2 install --with-python stage
 
-echo "Restarting Jupyter..."
-sudo sv stop jupyter && sudo sv start jupyter
+echo "Step back..."
+cd -
 
 echo "Done."

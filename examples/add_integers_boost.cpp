@@ -14,6 +14,5 @@ uint64_t f(uint64_t n) {
 }
 
 BOOST_PYTHON_MODULE(add_integers_boost) {
-
 	p::def("f", f);
 }

@@ -13,7 +13,7 @@ for filename in glob.iglob(PYTHON_BASE + "/**/Python.h", recursive=True):
 for filename in glob.iglob(PYTHON_BASE + "/**/arrayobject.h", recursive=True):
     NUMPY_INCLUDE = filename.replace("/numpy/arrayobject.h", "")
 
-with open("envs.sh", "w") as f:
+with open("boost_envs.sh", "w") as f:
     f.write("export BOOST_ROOT={}\n".format(BOOST_ROOT))
     f.write("export BOOST_LIB={}\n".format(BOOST_LIB))
     f.write("export PYTHON_INCLUDE={}\n".format(PYTHON_INCLUDE))
