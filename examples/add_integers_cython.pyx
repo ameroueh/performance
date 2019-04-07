@@ -7,3 +7,11 @@ def f(uint64_t n):
         total += i
         i += 1
     return total
+
+def f_no_annotations(n):
+    total = 0
+    i = 0
+    while i < n:
+        total += i
+        i += 1
+    return total
