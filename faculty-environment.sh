@@ -13,7 +13,7 @@ echo "Copying environment variables file to /etc/faculty_environment.d ..."
 cp envs.sh /etc/faculty_environment.d/boost_envs.sh
 
 echo "Restarting Jupyter..."
-sudo sv stop jupyter && sudo sv start jupyter
+sudo sv restart jupyter
 
 echo "Step back..."
 popd
