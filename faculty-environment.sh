@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Copying performance environment variables file to /etc/faculty_environment..."
-sudo echo LD_LIBRARY_PATH=$PWD/examples:'$LD_LIBRARY_PATH' > /etc/faculty_environment.d/performance_envs.sh
+echo LD_LIBRARY_PATH=$PWD/examples:'$LD_LIBRARY_PATH' | sudo tee /etc/faculty_environment.d/performance_envs.sh
 
 echo "CD into install-boost..."
 TMP_DIR=$(pwd)
