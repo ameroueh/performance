@@ -8,7 +8,7 @@ echo "Creating environment variables file..."
 python create_envs_file.py /tmp/boost_1_69_0
 
 echo "Sourcing environment variables..."
-source envs.sh
+source boost_envs.sh
 
 echo "CD into /tmp/boost_1_69_0"
 cp patch_boost_project_config.py /tmp/boost_1_69_0

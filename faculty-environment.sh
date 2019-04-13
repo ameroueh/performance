@@ -10,7 +10,7 @@ echo "Installing Boost..."
 source install_boost.sh
 
 echo "Copying environment variables file to /etc/faculty_environment.d ..."
-cp envs.sh /etc/faculty_environment.d/boost_envs.sh
+cp boost_envs.sh /etc/faculty_environment.d/boost_envs.sh
 
 echo "Restarting Jupyter..."
 sudo sv restart jupyter
